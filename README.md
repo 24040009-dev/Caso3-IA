@@ -6,36 +6,98 @@ Tiene las mismas funciones que la página web.
 
 ## Cómo ejecutarla
 
-Descomprime inventario_app.zip y abre una terminal dentro de la carpeta inventario_app.
+Descomprime `inventario_app.zip` y abre una terminal dentro de la carpeta `inventario_app`.
 
-WINDOWS
-Opción rápida
+---
 
-Doble clic en run.bat. Crea el entorno, instala las librerías y abre la app.
+### Windows
 
-Paso a paso (PowerShell)
-Revisa Python: python --version (Si no tienes Python, instálalo desde python.org marcando "Add python.exe to PATH".)
-Entra a la carpeta: cd $HOME\Downloads\inventario_app
-Crea el entorno virtual: python -m venv .venv
-Actívalo: .venv\Scripts\Activate.ps1 (Si dice que la ejecución de scripts está deshabilitada, ejecuta una vez: Set-ExecutionPolicy -Scope CurrentUser RemoteSigned) En CMD se activa con: .venv\Scripts\activate.bat
-Instala las librerías: python -m pip install --upgrade pip pip install -r requirements.txt
-Inicia la app: streamlit run app.py
+#### Opción rápida
+Haz doble clic en `run.bat`. Este script crea el entorno virtual, instala las librerías y abre la aplicación automáticamente.
 
-MAC
+#### Paso a paso (PowerShell)
 
-Descomprime inventario_app.zip
+1. **Revisa tu versión de Python:**
+   ```powershell
+   python --version
+   ```
+   > **Nota:** Si no tienes Python, instálalo desde [python.org](https://www.python.org/) asegurándote de marcar la casilla **"Add python.exe to PATH"**.
 
-Paso a paso
-Revisa Python: python3 --version
-Entra a la carpeta: cd ~/Downloads/inventario_app
-Crea el entorno virtual: python3 -m venv .venv
-Actívalo: source .venv/bin/activate
-Instala las librerías: python -m pip install --upgrade pip pip install -r requirements.txt
-Inicia la app: streamlit run app.py
-Después de iniciar
-La app se abre en el navegador, normalmente en http://localhost:8501.
-Si pide un correo la primera vez, deja el campo vacío y presiona Enter.
-Para cerrarla, presiona Ctrl + C en la terminal.
+2. **Entra a la carpeta del proyecto:**
+   ```powershell
+   cd $HOME\Downloads\inventario_app
+   ```
+
+3. **Crea el entorno virtual:**
+   ```powershell
+   python -m venv .venv
+   ```
+
+4. **Activa el entorno virtual:**
+   ```powershell
+   .venv\Scripts\Activate.ps1
+   ```
+   > **¿Error de permisos?** Si dice que la ejecución de scripts está deshabilitada, ejecuta este comando una sola vez y vuelve a intentar:
+   > ```powershell
+   > Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+   > ```
+   > *Si utilizas **CMD** en lugar de PowerShell, actívalo con:* `.venv\Scripts\activate.bat`
+
+5. **Instala las librerías:**
+   ```powershell
+   python -m pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+
+6. **Inicia la aplicación:**
+   ```powershell
+   streamlit run app.py
+   ```
+
+---
+
+### Mac
+
+1. **Descomprime** `inventario_app.zip` y abre la Terminal.
+
+2. **Revisa tu versión de Python:**
+   ```bash
+   python3 --version
+   ```
+
+3. **Entra a la carpeta del proyecto:**
+   ```bash
+   cd ~/Downloads/inventario_app
+   ```
+
+4. **Crea el entorno virtual:**
+   ```bash
+   python3 -m venv .venv
+   ```
+
+5. **Activa el entorno virtual:**
+   ```bash
+   source .venv/bin/activate
+   ```
+
+6. **Instala las librerías:**
+   ```bash
+   python -m pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+
+7. **Inicia la aplicación:**
+   ```bash
+   streamlit run app.py
+   ```
+
+---
+
+### 🌐 Después de iniciar
+
+* La aplicación se abrirá en tu navegador, normalmente en `http://localhost:8501`.
+* **Primera vez:** Si la terminal te pide un correo electrónico, deja el campo vacío y presiona `Enter`.
+* **Para cerrarla:** Presiona `Ctrl + C` en la terminal.
 
 ## Cómo usarla
 
