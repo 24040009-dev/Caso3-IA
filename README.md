@@ -6,18 +6,36 @@ Tiene las mismas funciones que la página web.
 
 ## Cómo ejecutarla
 
-Requisito: Python 3.10 a 3.13 e internet la primera vez (para instalar las librerías).
+Descomprime inventario_app.zip y abre una terminal dentro de la carpeta inventario_app.
 
-- **Windows:** doble clic en `run.bat`
-- **Mac / Linux:** `./run.sh`
-- **Manual:**
-  ```
-  python -m venv .venv
-  .venv\Scripts\activate        (Mac/Linux: source .venv/bin/activate)
-  pip install -r requirements.txt
-  streamlit run app.py
-  ```
-Se abre en el navegador (normalmente http://localhost:8501).
+WINDOWS
+Opción rápida
+
+Doble clic en run.bat. Crea el entorno, instala las librerías y abre la app.
+
+Paso a paso (PowerShell)
+Revisa Python: python --version (Si no tienes Python, instálalo desde python.org marcando "Add python.exe to PATH".)
+Entra a la carpeta: cd $HOME\Downloads\inventario_app
+Crea el entorno virtual: python -m venv .venv
+Actívalo: .venv\Scripts\Activate.ps1 (Si dice que la ejecución de scripts está deshabilitada, ejecuta una vez: Set-ExecutionPolicy -Scope CurrentUser RemoteSigned) En CMD se activa con: .venv\Scripts\activate.bat
+Instala las librerías: python -m pip install --upgrade pip pip install -r requirements.txt
+Inicia la app: streamlit run app.py
+
+MAC
+
+Descomprime inventario_app.zip
+
+Paso a paso
+Revisa Python: python3 --version
+Entra a la carpeta: cd ~/Downloads/inventario_app
+Crea el entorno virtual: python3 -m venv .venv
+Actívalo: source .venv/bin/activate
+Instala las librerías: python -m pip install --upgrade pip pip install -r requirements.txt
+Inicia la app: streamlit run app.py
+Después de iniciar
+La app se abre en el navegador, normalmente en http://localhost:8501.
+Si pide un correo la primera vez, deja el campo vacío y presiona Enter.
+Para cerrarla, presiona Ctrl + C en la terminal.
 
 ## Cómo usarla
 
